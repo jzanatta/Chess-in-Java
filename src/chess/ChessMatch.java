@@ -274,7 +274,7 @@ public class ChessMatch {
 	}
 	
 	private boolean testCheck(Color color) {
-		Position kingPosition = kingPosition = king(color).getChessPosition().toPosition();
+		Position kingPosition = king(color).getChessPosition().toPosition();
 		List <Piece> opponentPieces = piecesOnTheBoard.stream().filter(x -> ((ChessPiece)x).getColor() == opponent(color)) .collect(Collectors.toList());
 		for (Piece p : opponentPieces) {
 			boolean[][] mat = p.possibleMoves();
